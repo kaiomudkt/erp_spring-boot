@@ -2,7 +2,7 @@ version: '3'
 
 services:
 
-  postgres:
+  erp-postgres:
     image: postgres
     ports:
       - ${DB_MAIN_PORT}:5432
@@ -13,7 +13,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  # keycloak:
+  # erp-keycloak:
   #   image: jboss/keycloak:latest
   #   environment:
   #     - KEYCLOAK_USER=${KEYCLOAK_USER}
