@@ -1,6 +1,6 @@
-package com.example.mithbin.models;
+package com.example.mithbin.core.models;
 
-import com.example.mithbin.enums.PermissionEnum;
+import com.example.mithbin.core.enums.PermissionEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

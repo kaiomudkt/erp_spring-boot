@@ -1,4 +1,4 @@
-package com.example.mithbin.models;
+package com.example.mithbin.core.models;
 
 import jakarta.persistence.*;
 import org.springframework.hateoas.RepresentationModel;

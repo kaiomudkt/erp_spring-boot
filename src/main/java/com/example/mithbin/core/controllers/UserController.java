@@ -1,7 +1,7 @@
-package com.example.mithbin.controllers;
+package com.example.mithbin.core.controllers;
 
-import com.example.mithbin.models.UserModel;
-import com.example.mithbin.repositories.UserRepository;
+import com.example.mithbin.core.models.UserModel;
+import com.example.mithbin.core.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

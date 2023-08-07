@@ -1,4 +1,4 @@
-package com.example.mithbin.enums;
+package com.example.mithbin.core.enums;
 
 public enum PermissionEnum {
     ADMIN("admin"),

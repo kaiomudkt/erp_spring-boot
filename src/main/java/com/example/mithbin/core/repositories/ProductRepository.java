@@ -1,6 +1,6 @@
-package com.example.mithbin.repositories;
+package com.example.mithbin.core.repositories;
 
-import com.example.mithbin.models.ProductModel;
+import com.example.mithbin.core.models.ProductModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

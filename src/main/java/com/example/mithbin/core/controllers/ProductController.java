@@ -1,8 +1,8 @@
-package com.example.mithbin.controllers;
+package com.example.mithbin.core.controllers;
 
-import com.example.mithbin.dtos.ProductRecordDto;
-import com.example.mithbin.models.ProductModel;
-import com.example.mithbin.repositories.ProductRepository;
+import com.example.mithbin.core.dtos.ProductRecordDto;
+import com.example.mithbin.core.models.ProductModel;
+import com.example.mithbin.core.repositories.ProductRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

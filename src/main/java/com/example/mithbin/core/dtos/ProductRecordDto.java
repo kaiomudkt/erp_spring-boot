@@ -1,4 +1,4 @@
-package com.example.mithbin.dtos;
+package com.example.mithbin.core.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

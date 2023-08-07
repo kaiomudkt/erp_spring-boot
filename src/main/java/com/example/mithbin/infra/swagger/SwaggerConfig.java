@@ -1,4 +1,4 @@
-package com.example.mithbin.infra.security.config;
+package com.example.mithbin.infra.swagger;
 
 public class SwaggerConfig {
 }
