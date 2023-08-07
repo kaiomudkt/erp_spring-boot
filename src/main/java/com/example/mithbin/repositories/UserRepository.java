@@ -13,4 +13,7 @@ import java.util.UUID;
 public interface UserRepository extends JpaRepository<UserModel, UUID> {
     @Query(value = "SELECT * FROM TB_USERS WHERE EXTRACT(YEAR FROM age(NOW(), birth_at)) BETWEEN :minAge AND :maxAge", nativeQuery = true)
     Page<UserModel> findByAgeBetween(Double minAge, Double maxAge, Pageable page);
+
+    @Query(value = "SELECT * FROM TB_USERS as obj WHERE LOWER(obj.name) LIKE LOWER(CONCAT('%', :name, '%'))", nativeQuery = true)
+    Page<UserModel> findByName(String name, Pageable page);
 }

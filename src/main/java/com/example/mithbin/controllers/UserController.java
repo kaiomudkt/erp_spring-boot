@@ -43,4 +43,14 @@ public class UserController {
         Page<UserModel> result = userRepository.findByAgeBetween(minAge, maxAge, page);
         return ResponseEntity.ok(result);
     }
+
+    @GetMapping(value="/users/search-name")
+    public ResponseEntity<Page<UserModel>> searchByName(
+            @RequestParam(defaultValue = "")
+            String name,
+            Pageable page
+    ) {
+        Page<UserModel> result = userRepository.findByName(name, page);
+        return ResponseEntity.ok(result);
+    }
 }
