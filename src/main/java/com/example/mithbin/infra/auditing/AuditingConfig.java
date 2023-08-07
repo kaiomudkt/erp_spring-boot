@@ -1,4 +1,4 @@
-package com.example.mithbin.config;
+package com.example.mithbin.infra.security.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
