@@ -4,6 +4,8 @@ services:
 
   erp-postgres:
     image: postgres
+    env_file:
+      - .env
     ports:
       - ${DB_MAIN_PORT}:5432
     environment:
