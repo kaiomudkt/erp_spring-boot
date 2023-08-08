@@ -13,4 +13,13 @@ public enum PermissionEnum {
      public String getPermission() {
         return permission;
      }
+
+    public static PermissionEnum toEnum(String value) {
+        for (PermissionEnum permissionEnum : PermissionEnum.values()) {
+            if (permissionEnum.permission.equalsIgnoreCase(value)) {
+                return permissionEnum;
+            }
+        }
+        throw new IllegalArgumentException("Invalid permission: " + value);
+    }
 }

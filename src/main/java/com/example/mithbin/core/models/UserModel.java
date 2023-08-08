@@ -19,7 +19,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name = "TB_USERS")
-@EntityListeners(AuditingEntityListener.class)
+//@EntityListeners(AuditingEntityListener.class)
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -58,8 +58,14 @@ public class UserModel extends RepresentationModel<UserModel> implements Seriali
 
     private Date updatedAt;
 
-
 //    private TenantModel tenant;
+
+    public UserModel(String login, String password, List<PermissionEnum> permissionEnum) {
+        this.login = login;
+        this.password = password;
+        this.permissions = permissionEnum;
+    }
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -73,17 +79,17 @@ public class UserModel extends RepresentationModel<UserModel> implements Seriali
         return authorities;
     }
 
-    @Override
+     @Override
     public String getPassword() {
         return null;
     }
 
-    @Override
+     @Override
     public String getUsername() {
         return login;
     }
 
-    @Override
+     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
@@ -93,12 +99,12 @@ public class UserModel extends RepresentationModel<UserModel> implements Seriali
         return true;
     }
 
-    @Override
+     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
-    @Override
+     @Override
     public boolean isEnabled() {
         return true;
     }
